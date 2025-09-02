@@ -1,0 +1,1 @@
+Folder where the generated netlists are stored.

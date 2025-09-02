@@ -1,0 +1,1 @@
+Folder for storing the simulation results in the pkl format.
