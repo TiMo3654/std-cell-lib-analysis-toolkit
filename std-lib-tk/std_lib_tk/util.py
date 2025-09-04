@@ -12,6 +12,9 @@ def get_file_names(directory):
 # Helper functions
 
 def convert_attributes(attribute : str):
+    """
+    Converts a numerical attribute to float, strings are passed unchanged.
+    """
 
     try:
 
@@ -23,6 +26,9 @@ def convert_attributes(attribute : str):
         
 
 def attribute2dict(cell_attributes : Attribute) -> dict:
+    """
+    Converts a liberty attribute to python dictionary.
+    """
 
     s = [str(a) for a in cell_attributes]
 
@@ -30,6 +36,9 @@ def attribute2dict(cell_attributes : Attribute) -> dict:
 
 
 def lib2list(library : Group) -> list:
+    """
+    Returns a list of tuples (cell_name, cell_attributes) from library type.
+    """
 
     return [(str(cell_group.args[0]), attribute2dict(cell_group.attributes)) for cell_group in library.get_groups('cell')]
 
@@ -37,6 +46,9 @@ def lib2list(library : Group) -> list:
 # Functions to preprocess given liberty files 
 
 def preprocess_expression(expr):
+    """
+    Convert liberty boolean syntax to python boolean syntax.
+    """
     expr = re.sub(r'!', 'not ', expr)
     expr = re.sub(r'\+', ' or ', expr)
     expr = re.sub(r'\*', ' and ', expr)

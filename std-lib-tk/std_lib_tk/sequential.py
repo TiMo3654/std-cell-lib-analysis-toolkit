@@ -1,6 +1,9 @@
 from .util import *
 
 def get_ff_pins(cell: Group) -> list:
+    """
+    Returns the pins of a flip-flop. Also handles bundled pins.
+    """
 
     pins = []
 

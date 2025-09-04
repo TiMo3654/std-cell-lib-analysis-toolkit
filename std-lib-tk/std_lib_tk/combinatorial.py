@@ -28,6 +28,9 @@ def generate_sensitive_vectors(expr):
 
 
 def create_voltage_sources(testvector, v_high, v_low, tran_time):
+    """
+    Based on the stimulus input a list of DC and pulse sources are created.
+    """
 
     voltage_sources = []
 
@@ -91,6 +94,9 @@ def create_voltage_sources(testvector, v_high, v_low, tran_time):
 
 
 def generate_combinatorial_tb_netlist(pins, cell_name, voltage_sources, c_load, temperature, tran_time):
+    """
+    Function to generate the netlist for a combinatorial cell.
+    """
     header = [
         "simulator lang=spectre",
         "global 0 vdd!",
@@ -163,6 +169,9 @@ def generate_combinatorial_tb_netlist(pins, cell_name, voltage_sources, c_load, 
 
 
 def write_cell_testbench(cell : Group, v_sup : float, temperature : int, tran_time : float, path : str):
+    """
+    Extraction of necessary parameters and netlist to disc writing.
+    """
 
     q_pin       = select_pin(cell, "Q").attributes
     
