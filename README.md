@@ -1,6 +1,8 @@
 # std-cell-lib-analysis-toolkit
 Collection of functions to test standard cells using python and spectre.
 
+![Results Plot](example/results/output.png)
+
 # Purpose
 
 The functions provided in this repository are meant for quickly analyzing 
