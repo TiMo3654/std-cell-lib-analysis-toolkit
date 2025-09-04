@@ -4,6 +4,10 @@ import numpy as np
 import pandas as pd
 import itertools
 import re
+import os
+
+def get_file_names(directory):
+    return [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
 
 
 # Helper functions

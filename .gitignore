@@ -2,8 +2,9 @@
 
 *.lib
 *.pkl 
-*.scs
 *.txt
+
+data/
 
 
 # Byte-compiled / optimized / DLL files

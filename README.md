@@ -8,9 +8,8 @@ standard cells in regard of their timing behaviour. This is explicitly not
 a full characterization environment for creating liberty files like [CharLib](https://github.com/stineje/CharLib), 
 [lctime](https://codeberg.org/librecell/lctime), [libretto](https://github.com/snishizawa/libretto) 
 or commercial alternatives. Instead this is intended to be used for
-playing around with a library, testing cells and identifying patterns. Therefore,
-the simulation results are available as pandas dataframes to enable further 
-processing.
+quick testbench creation and subsequent arc analysis in Python with minimal
+setup overhead.
 
 # Implemented functionalities
 

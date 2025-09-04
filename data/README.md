@@ -1,1 +1,4 @@
-Folder for spectre files of the standard cell.
+Place here:
+
+- Liberty files (.lib)
+- Spectre subcircuit definitions (.scs)

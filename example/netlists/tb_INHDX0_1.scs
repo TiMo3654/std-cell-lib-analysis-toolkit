@@ -1,0 +1,31 @@
+simulator lang=spectre
+global 0 vdd!
+include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/config.scs" section=default
+include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/param.scs" section=3s
+include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/bip.scs" section=tm
+include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/cap.scs" section=tm
+include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/dio.scs" section=tm
+include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/mos.scs" section=tm
+include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/res.scs" section=tm
+include "./data/xt018_subcircuits.scs"
+
+I3 (A Q 0 vdd!) INHDX0
+V0 (A 0) vsource type=pulse val0=0.8 val1=0.0 delay=1e-09 rise=1e-09 fall=9.360250000000001e-09 width=1
+V1 (vdd! 0) vsource dc=0.8 type=dc
+C0 (Q 0) capacitor c=2.6500000000000003e-13
+
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=175 tnom=27 homotopy=all limit=delta scalem=1.0 \
+    scale=1.0 compatible=spice2 gmin=1e-12 rforce=1 \
+    redefinedparams=warning maxnotes=5 maxwarns=5 digits=5 cols=80 \
+    pivrel=1e-3 sensfile="../psf/sens.output" checklimitdest=psf
+tran tran stop=1.2e-08 errpreset=conservative write="spectre.ic" \
+    writefinal="spectre.fc" annotate=status maxiters=5
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub

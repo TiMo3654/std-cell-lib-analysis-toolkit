@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "std_lib_tk"
+version = "0.1.0"
+description = "Standard cell library analysis toolkit"
+authors = [
+    { name = "Your Name" }
+]
+dependencies = []
