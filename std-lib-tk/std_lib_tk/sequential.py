@@ -100,7 +100,7 @@ def generate_ff_netlist(pins, cell_name, voltage_sources, c_load, temperature, t
         'include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/dio.scs" section=tm',
         'include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/mos.scs" section=tm',
         'include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/res.scs" section=tm',
-        'include "./data/xt018_ff_subcircuits.scs"',
+        'include "./../../data/xt018_ff_subcircuits.scs"',
         ""
     ]
 

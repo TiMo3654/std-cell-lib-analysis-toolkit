@@ -1,7 +1,6 @@
 from liberty.parser import parse_liberty
 from liberty.types import *
 import numpy as np
-import pandas as pd
 import itertools
 import re
 import os

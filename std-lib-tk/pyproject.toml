@@ -7,6 +7,6 @@ name = "std_lib_tk"
 version = "0.1.0"
 description = "Standard cell library analysis toolkit"
 authors = [
-    { name = "Your Name" }
+    { name = "TiMo3654" }
 ]
 dependencies = []

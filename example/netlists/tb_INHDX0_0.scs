@@ -7,11 +7,11 @@ include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/cap.scs" 
 include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/dio.scs" section=tm
 include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/mos.scs" section=tm
 include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/res.scs" section=tm
-include "./data/xt018_subcircuits.scs"
+include "./../../data/xt018_subcircuits.scs"
 
 I3 (A Q 0 vdd!) INHDX0
-V0 (A 0) vsource type=pulse val0=0.0 val1=0.8 delay=1e-09 rise=9.360250000000001e-09 fall=1e-09 width=1
-V1 (vdd! 0) vsource dc=0.8 type=dc
+V0 (A 0) vsource type=pulse val0=0.0 val1=1.8 delay=1e-09 rise=9.360250000000001e-09 fall=1e-09 width=1
+V1 (vdd! 0) vsource dc=1.8 type=dc
 C0 (Q 0) capacitor c=2.6500000000000003e-13
 
 simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \

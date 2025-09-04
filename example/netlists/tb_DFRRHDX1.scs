@@ -7,7 +7,7 @@ include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/cap.scs" 
 include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/dio.scs" section=tm
 include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/mos.scs" section=tm
 include "/mnt/data/pdk/XKIT/xt018/cadence/v10_0/spectre/v10_0_4/lp5mos/res.scs" section=tm
-include "./data/xt018_ff_subcircuits.scs"
+include "./../../data/xt018_ff_subcircuits.scs"
 
 I0 (C D Q QN RN 0 vdd!) DFRRHDX1
 V0 (D0 0) vsource type=pulse val0=0.0 val1=1.8 delay=1e-08 rise=1e-12 fall=1e-12 width=1, period=2
