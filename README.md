@@ -26,7 +26,7 @@ Look into the examples folder for demonstrations.
 ## Installation
 
 ```sh
-$ pip install git+https://github.com/TiMo3654/std-cell-lib-analysis-toolkit.git
+$ pip install git+https://github.com/TiMo3654/std-cell-lib-analysis-toolkit.git#subdirectory=std-lib-tk
 ```
 
 ## Dependencies
